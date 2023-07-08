@@ -91,7 +91,7 @@ class CompleteAuthorizeRequest extends AbstractRequest
             throw new InvalidRequestException('Missing expected transactionId parameter');
         }
 
-        if ($originalTransactionId !== $returnedTransactionId) {
+        if ($originalTransactionId != $returnedTransactionId) {
             throw new InvalidResponseException(sprintf(
                 'Unexpected transactionId; expected "%s" received "%s"',
                 $originalTransactionId,
